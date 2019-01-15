@@ -1,14 +1,14 @@
 {
   "name": "sinclair.tech",
-  "description": "Personal website of David Sinclair",
+  "description": "Personal website of Julia Palm",
   "author": "David Sinclair <david@sinclair.tech> (https://sinclair.tech)",
-  "homepage": "https://sinclair.tech",
-  "version": "2.0.0",
+  "homepage": "https://juliapalm.com",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production next start"
   },
   "xo": {
     "prettier": true,
@@ -33,16 +33,11 @@
     "space": 2
   },
   "dependencies": {
-    "axios": "0.18.0",
-    "lodash": "4.17.11",
-    "moment": "2.23.0",
     "next": "7.0.2",
-    "path-match": "1.2.4",
     "prop-types": "15.6.2",
     "raw-loader": "1.0.0",
     "react": "16.7.0-alpha.2",
     "react-dom": "16.7.0-alpha.2",
-    "react-highlight": "0.12.0",
     "showdown": "1.9.0"
   },
   "devDependencies": {

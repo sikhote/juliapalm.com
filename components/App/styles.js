@@ -19,6 +19,8 @@ export default css.global`
     font-size: ${fontSizes.a3}px;
     color: ${colors.text};
     background: ${colors.background};
+    background-image: url("/static/img/green_cup.png");
+
   }
   .markdown:nth-of-type(n + 3) {
     padding-top: ${spacing.a5}px;
@@ -27,14 +29,15 @@ export default css.global`
     color: ${colors.a1};
   }
   .markdown h1 {
-    padding-bottom: ${spacing.a5}px;
     font-size: ${fontSizes.a5}px;
-    font-weight: ${fontWeights.thin};
+    font-weight: ${fontWeights.bold};
+    font-family: ${fontFamilies.headers};
   }
   .markdown h2 {
     padding-bottom: ${spacing.a3}px;
     font-size: ${fontSizes.a4}px;
     font-weight: ${fontWeights.bold};
+    font-family: ${fontFamilies.headers};
   }
   .markdown h3 {
     padding-bottom: ${spacing.a3}px;
@@ -104,6 +107,12 @@ export default css.global`
     margin-left: ${spacing.a5}px;
   }
   .markdown > *:not(:last-child):not(h1):not(h2):not(h3):not(h4):not(hr) {
-    padding-bottom: ${spacing.a5}px;
+    padding-bottom: ${spacing.a7}px;
+  }
+  .markdown i {
+    margin-left: ${spacing.a4}px;
+  }
+  .markdown i:before {
+    margin-right: -0.6em;
   }
 `;
