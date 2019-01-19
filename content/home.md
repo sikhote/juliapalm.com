@@ -34,4 +34,3 @@ Sinclair-Palm is the co-editor (with Jen Gilbert) of a special of Sex Education 
 - [Twitter](https://twitter.com/JSinclairPalm)
 - [LinkedIn](https://www.linkedin.com/in/julia-sinclair-palm-2374546/)
 - [Homeless Hub](https://www.homelesshub.ca/users/juliasinclair)
-t
