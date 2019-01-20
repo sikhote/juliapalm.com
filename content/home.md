@@ -19,7 +19,7 @@ Sinclair-Palm is the co-editor (with Jen Gilbert) of a special of Sex Education 
 - 2017 - [“It’s Non-Existent”: Haunting in Trans Youth Narratives about Naming](https://educate.bankstreet.edu/occasional-paper-series/vol2017/iss37/7/) (Download [<i class="demo-icon icon-file-pdf"></i>](/static/downloads/writing/its-non-existent.pdf))
 - 2016 - [What's In a Name?: Trans Youths' Experiences of Re-Naming](https://yorkspace.library.yorku.ca/xmlui/bitstream/handle/10315/33434/Sinclair-Palm_Julia_H_2016_PhD.pdf?sequence=2&isAllowed=y) (Download [<i class="demo-icon icon-file-pdf"></i>](/static/downloads/writing/Sinclair-Palm_Julia_H_2016_PhD.pdf))
 
-# Research Interests
+## Research Interests
 - Trans Youth
 - Child and Youth Gender and Sexuality
 - Sexuality Education
