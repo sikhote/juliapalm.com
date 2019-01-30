@@ -72,7 +72,7 @@ Text.defaultProps = {
   fontWeight: fontWeights.bold,
   fontWeightKey: '',
   fontFamily: fontFamilies.normal,
-  lineHeight: lineHeights.normal,
+  lineHeight: `${lineHeights.normal}em`,
   messageId: undefined,
   width: undefined,
   textAlign: undefined,

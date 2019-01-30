@@ -14,11 +14,11 @@ export default class Document extends NextDocument {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
-            href="https://fonts.googleapis.com/css?family=Sarabun"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,700"
             rel="stylesheet"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Merriweather"
+            href="https://fonts.googleapis.com/css?family=Oswald:300,600"
             rel="stylesheet"
           />
           <link

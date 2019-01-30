@@ -1,0 +1,4 @@
+- [Carleton Faculty Profile](https://carleton.ca/iis/people/julia-sinclair-palm)
+- [Twitter](https://twitter.com/JSinclairPalm)
+- [LinkedIn](https://www.linkedin.com/in/julia-sinclair-palm-2374546/)
+- [Homeless Hub](https://www.homelesshub.ca/users/juliasinclair)

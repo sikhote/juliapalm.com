@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Favicons = () => (
-  <React.Fragment>
+  <>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -32,7 +32,7 @@ const Favicons = () => (
       content="/static/img/favicons/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
-  </React.Fragment>
+  </>
 );
 
 export default Favicons;

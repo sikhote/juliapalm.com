@@ -1,0 +1,3 @@
+- [(613) 520-2600](tel:613-520-2600) x 8169
+- [julia.sinclairpalm@carleton.ca](mailto:julia.sinclairpalm@carleton.ca)
+- [1318 Dunton Tower, Ottawa, ON, K1S 5B6](https://duckduckgo.com/?q=1318+Dunton+Tower%2C+Ottawa%2C+ON%2C+K1S+5B6&t=ffab&ia=maps&iaxm=maps)

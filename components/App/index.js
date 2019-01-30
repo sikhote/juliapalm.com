@@ -1,6 +1,5 @@
 import React from 'react';
 import NextApp, { Container } from 'next/app';
-import Page from '../Page';
 import styles from './styles';
 
 class App extends NextApp {
@@ -20,9 +19,7 @@ class App extends NextApp {
     return (
       <Container>
         <style jsx>{styles}</style>
-        <Page>
-          <Component {...pageProps} />
-        </Page>
+        <Component {...pageProps} />
       </Container>
     );
   }

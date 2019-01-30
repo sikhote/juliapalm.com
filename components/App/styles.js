@@ -5,6 +5,8 @@ import {
   fontSizes,
   colors,
   spacing,
+  bps,
+  lineHeights,
 } from '../../lib/styling';
 
 export default css.global`
@@ -12,32 +14,30 @@ export default css.global`
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-	}
-  body {
     font-family: ${fontFamilies.normal};
     font-weight: ${fontWeights.normal};
     font-size: ${fontSizes.a3}px;
     color: ${colors.text};
-    background: ${colors.background};
-    background-image: url("/static/img/green_cup.png");
-
-  }
-  .markdown:nth-of-type(n + 3) {
-    padding-top: ${spacing.a5}px;
+    line-height: ${lineHeights.normal}em;
   }
   .markdown a {
     color: ${colors.a1};
   }
-  .markdown h1 {
-    font-size: ${fontSizes.a5}px;
+  h1, .markdown h1 {
+    font-size: ${fontSizes.a8}px;
     font-weight: ${fontWeights.bold};
     font-family: ${fontFamilies.headers};
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    line-height: ${lineHeights.close}em;
   }
   .markdown h2 {
-    padding-bottom: ${spacing.a3}px;
-    font-size: ${fontSizes.a4}px;
+    font-size: ${fontSizes.a6}px;
     font-weight: ${fontWeights.bold};
     font-family: ${fontFamilies.headers};
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: ${lineHeights.close}em;
   }
   .markdown h3 {
     padding-bottom: ${spacing.a3}px;
@@ -106,13 +106,30 @@ export default css.global`
     padding: 0;
     margin-left: ${spacing.a5}px;
   }
-  .markdown > *:not(:last-child):not(h1):not(h2):not(h3):not(h4):not(hr) {
-    padding-bottom: ${spacing.a7}px;
+  .markdown > *:not(:last-child):not(h1):not(h2):not(h3):not(h4):not(hr):after {
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 100%;
   }
   .markdown i {
     margin-left: ${spacing.a4}px;
   }
   .markdown i:before {
     margin-right: -0.6em;
+  }
+
+  @media (max-width: ${bps.a2}px) {
+    h1, .markdown h1 {
+      font-size: ${fontSizes.a7}px;
+      letter-spacing: -3px;
+    }
+  }
+
+  @media (max-width: ${bps.a1}px) {
+    h1, .markdown h1 {
+      font-size: ${fontSizes.a5}px;
+      letter-spacing: -2px;
+    }
   }
 `;
