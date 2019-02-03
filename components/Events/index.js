@@ -65,19 +65,21 @@ export default () => (
           </div>
         ) : (
           <div key={key} className={`event ${odd ? 'odd' : 'even'} ${type}`}>
-            <div className="inner">
-              <div className="date">
-                {startDate
-                  ? `${startDateFormatted} - ${dateFormatted}`
-                  : dateFormatted}
+            <div className="outer">
+              <div className="inner">
+                <div className="date">
+                  {startDate
+                    ? `${startDateFormatted} - ${dateFormatted}`
+                    : dateFormatted}
+                </div>
+                <Component />
+                {download && (
+                  <a href={download} className="download">
+                    Download
+                    <i className={`demo-icon icon-file-${downloadType}`} />
+                  </a>
+                )}
               </div>
-              <Component />
-              {download && (
-                <a href={download} className="download">
-                  Download
-                  <i className={`demo-icon icon-file-${downloadType}`} />
-                </a>
-              )}
             </div>
           </div>
         );
