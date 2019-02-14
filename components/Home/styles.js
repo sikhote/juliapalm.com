@@ -1,4 +1,5 @@
 import css from 'styled-jsx/css';
+import { transparentize, darken } from 'polished';
 import {
   bps,
   spacing,
@@ -7,6 +8,7 @@ import {
   lineHeights,
   fontSizes,
   borderRadii,
+  colors,
 } from '../../lib/styling';
 
 export default css`
@@ -18,11 +20,11 @@ export default css`
     justify-content: center;
     align-items: center;
     padding: ${spacing.page / 2}px ${spacing.page}px;
-    background: black;
+    background: ${colors.contactBg};
   }
   .contact :global(ul li),
   .contact :global(ul li a) {
-    color: rgba(255, 255, 255, 0.9);
+    color: ${colors.contactText};
     font-weight: ${fontWeights.normal};
     font-size: ${fontSizes.a2}px;
     font-family: ${fontFamilies.headers};
@@ -31,7 +33,7 @@ export default css`
     text-decoration: none;
   }
   .contact :global(ul li:before) {
-    color: rgba(255, 255, 255, 0.5);
+    color: ${colors.contactDots};
     font-weight: ${fontWeights.normal};
     font-family: ${fontFamilies.headers};
     font-size: ${fontSizes.a2}px;
@@ -46,20 +48,29 @@ export default css`
   h1 {
     padding: ${spacing.page}px;
     padding-top: ${spacing.page * 2}px;
+    background: ${colors.introBg};
+    color: ${colors.introH1};
   }
   .intro {
     column-width: 400px;
     column-gap: ${spacing.a7}px;
     column-fill: balance;
     padding: 0 ${spacing.page * 4}px ${spacing.page}px ${spacing.page * 4}px;
+    background: ${colors.introBg};
+  }
+  .intro :global(*) {
+    color: ${colors.introText};
+  }
+  .intro :global(a) {
+    color: ${colors.links};
   }
   .research {
-    background: linear-gradient(10deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2)),
-      url('/static/img/backgrounds/crossword.png');
+    background: ${colors.researchBg};
     padding: ${spacing.page}px;
   }
   .research :global(h2) {
     text-align: center;
+    color: ${colors.researchH2};
   }
   .research :global(ul) {
     text-align: center;
@@ -71,17 +82,19 @@ export default css`
     padding-left: 0;
     text-indent: 0;
     padding: ${spacing.a4}px;
-    background: white;
+    background: ${colors.researchBox};
     display: inline-block;
     border-radius: ${borderRadii.a1}px;
     margin: ${spacing.a5}px ${spacing.a5}px 0 0;
     font-size: ${fontSizes.a2}px;
+    color: ${colors.researchText};
   }
   .research :global(ul li:before) {
     display: none;
   }
   .social {
     padding: ${spacing.page}px;
+    background: ${colors.socialBg};
   }
   .social :global(ul) {
     display: grid;
@@ -94,12 +107,14 @@ export default css`
   .social :global(ul li a) {
     font-weight: ${fontWeights.normal};
     line-height: ${lineHeights.close}em;
+    color: ${colors.socialLink};
   }
   .social :global(ul li:before) {
     color: rgba(0, 0, 0, 0.5);
     font-weight: ${fontWeights.normal};
     font-family: ${fontFamilies.headers};
     font-size: ${fontSizes.a2}px;
+    color: ${colors.socialDots};
   }
   .social :global(ul li:first-child) {
     padding-left: 0;

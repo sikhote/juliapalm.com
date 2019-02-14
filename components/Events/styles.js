@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css';
-import { transparentize } from 'polished';
+import { transparentize, darken, lighten } from 'polished';
 import {
   bps,
   spacing,
@@ -18,8 +18,8 @@ export default css`
     grid-template-rows: auto;
     grid-auto-row: auto;
     grid-auto-flow: row;
-    background: linear-gradient(10deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1)),
-      url('/static/img/backgrounds/crossword.png');
+    background: ${colors.eventsBg};
+    border-top: 4px solid ${lighten(0.5, colors.a1)};
   }
   .big-date {
     font-family: ${fontFamilies.headers};
@@ -28,6 +28,7 @@ export default css`
     line-height: ${lineHeights.close}em;
     padding: ${spacing.a4}px;
     justify-self: center;
+    color: ${colors.eventsYear};
   }
   .event {
     width: 46vw;
@@ -43,7 +44,7 @@ export default css`
     display: block;
     width: 4px;
     height: calc(100% - 40px);
-    background: ${colors.border};
+    background: ${colors.eventsBar};
     position: absolute;
     top: 0;
     left: -2px;
@@ -57,8 +58,8 @@ export default css`
     width: 12px;
     height: 12px;
     border-radius: 2em;
-    background: white;
-    border: 3px solid ${colors.border};
+    background: ${colors.eventsCircle};
+    border: 3px solid ${colors.eventsBar};
     position: absolute;
     top: ${spacing.a6}px;
     left: -9px;
@@ -75,23 +76,14 @@ export default css`
     padding-right: ${spacing.a8}px;
   }
   .inner {
-    background: white;
+    background: ${colors.eventsBox};
     padding: ${spacing.a5}px;
     border-radius: ${borderRadii.a1}px;
-    border: 1px solid black;
-  }
-  .event.education .inner {
-    border-color: ${transparentize(0.7, colors.education)};
-  }
-  .event.writing .inner {
-    border-color: ${transparentize(0.7, colors.writing)};
-  }
-  .event.teaching .inner {
-    border-color: ${transparentize(0.7, colors.teaching)};
+    border: 1px solid ${colors.eventsBoxBorder};
   }
   .inner:before {
     border-bottom: 10px solid transparent;
-    border-right: 12px solid black;
+    border-right: 12px solid ${colors.eventsBoxBorder};
     border-left: none;
     border-top: 10px solid transparent;
     content: '';
@@ -100,15 +92,6 @@ export default css`
     top: ${spacing.a6}px;
     width: 0;
     z-index: 1;
-  }
-  .event.education .inner:before {
-    border-right-color: ${transparentize(0.7, colors.education)};
-  }
-  .event.writing .inner:before {
-    border-right-color: ${transparentize(0.7, colors.writing)};
-  }
-  .event.teaching .inner:before {
-    border-right-color: ${transparentize(0.7, colors.teaching)};
   }
   .event.odd .inner:before {
     left: ${spacing.a8 - 12}px;
@@ -119,7 +102,7 @@ export default css`
   }
   .inner:after {
     border-bottom: 9px solid transparent;
-    border-right: 11px solid white;
+    border-right: 11px solid ${colors.eventsBox};
     border-left: none;
     border-top: 9px solid transparent;
     z-index: 2;
@@ -136,10 +119,17 @@ export default css`
     right: ${spacing.a8 - 10}px;
     transform: rotate(180deg);
   }
+  .inner :global(*) {
+    color: ${colors.eventsText};
+  }
+  .inner :global(a) {
+    color: ${colors.eventsLinks};
+  }
   .date {
     font-weight: ${fontWeights.bold};
     font-size: ${fontSizes.a2}px;
     margin-bottom: ${spacing.a4}px;
+    color: ${colors.eventsTitle};
   }
   .download {
     display: inline-flex;

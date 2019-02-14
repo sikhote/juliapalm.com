@@ -21,7 +21,7 @@ export default css.global`
     line-height: ${lineHeights.normal}em;
   }
   .markdown a {
-    color: ${colors.a1};
+    color: ${colors.links};
   }
   h1, .markdown h1 {
     font-size: ${fontSizes.a8}px;
@@ -124,12 +124,18 @@ export default css.global`
       font-size: ${fontSizes.a7}px;
       letter-spacing: -3px;
     }
+    .markdown h2 {
+      font-size: ${fontSizes.a5}px;
+    }
   }
 
   @media (max-width: ${bps.a1}px) {
     h1, .markdown h1 {
       font-size: ${fontSizes.a5}px;
       letter-spacing: -2px;
+    }
+    .markdown h2 {
+      font-size: ${fontSizes.a4}px;
     }
   }
 `;
