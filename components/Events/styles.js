@@ -1,5 +1,4 @@
 import css from 'styled-jsx/css';
-import { transparentize, darken, lighten } from 'polished';
 import {
   bps,
   spacing,
@@ -19,7 +18,6 @@ export default css`
     grid-auto-row: auto;
     grid-auto-flow: row;
     background: ${colors.eventsBg};
-    border-top: 4px solid ${lighten(0.5, colors.a1)};
   }
   .big-date {
     font-family: ${fontFamilies.headers};
@@ -42,12 +40,12 @@ export default css`
   .event:before {
     content: '';
     display: block;
-    width: 4px;
+    width: 2px;
     height: calc(100% - 40px);
     background: ${colors.eventsBar};
     position: absolute;
     top: 0;
-    left: -2px;
+    left: -1px;
   }
   .event:last-of-type:before {
     height: 100%;
@@ -59,7 +57,7 @@ export default css`
     height: 12px;
     border-radius: 2em;
     background: ${colors.eventsCircle};
-    border: 3px solid ${colors.eventsBar};
+    border: 3px solid ${colors.white};
     position: absolute;
     top: ${spacing.a6}px;
     left: -9px;
@@ -131,7 +129,7 @@ export default css`
     margin-bottom: ${spacing.a4}px;
     color: ${colors.eventsTitle};
   }
-  .download {
+  .inner .download {
     display: inline-flex;
     align-items: center;
     margin-top: ${spacing.a5}px;
@@ -143,6 +141,8 @@ export default css`
     border: 1px solid rgb(200, 200, 200);
     border-radius: ${borderRadii.a1}px;
     text-decoration: none;
+    color: ${colors.eventsText};
+    background: ${colors.white};
   }
   .download :global(i) {
     margin-left: ${spacing.a4}px;

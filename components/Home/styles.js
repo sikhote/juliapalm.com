@@ -1,5 +1,4 @@
 import css from 'styled-jsx/css';
-import { transparentize, darken } from 'polished';
 import {
   bps,
   spacing,
@@ -67,6 +66,8 @@ export default css`
   .research {
     background: ${colors.researchBg};
     padding: ${spacing.page}px;
+    border-top: 4px solid ${colors.researchBorder};
+    border-bottom: 4px solid ${colors.researchBorder};
   }
   .research :global(h2) {
     text-align: center;
